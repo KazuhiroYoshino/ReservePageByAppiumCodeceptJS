@@ -1,14 +1,13 @@
 let reserveTestTable = new DataTable(['宿泊初日', '連泊数', '宿泊人数', '朝食', '昼からチェックインプラン', 'お得な観光プラン', '氏名', '合計料金', '向き']);
-reserveTestTable.add(['Monday', '2','1',  'off', 'off'                   ,'off'           ,'武田晴信','14000', '縦向き']);
-reserveTestTable.add(['Monday', '2','1',  'off', 'off'                   ,'off'           ,'武田晴信','13500', '横向き']);
-reserveTestTable.add(['Tuesday','3','8',  'on', 'on'                   ,'off'           ,'山本寛太','200000','縦向き']);
-reserveTestTable.add(['Wednesday','9','9','on','on'                 ,'off'           ,'真田昌虎','688500','縦向き']);
-reserveTestTable.add(['Thursday','1','9','off','on'                    ,'on'           ,'武田信子','81000','縦向き']);
-reserveTestTable.add(['Friday','5','1',    'off','on'                     ,'off'           ,'上杉景虎','39500','縦向き']);
-reserveTestTable.add(['Saturday','2','1','off','off'                     ,'on'          ,'柿崎家時','18500','縦向き']);
-reserveTestTable.add(['Sunday','5','2'  ,'off','on'                     ,'off'           ,'直江愛子','75500','縦向き']);
+reserveTestTable.add(['Monday','3','8','on','off','on','武田晴信','200000','縦向き']);
+reserveTestTable.add(['Tuesday','5','1','off','off','off','山本寛太','36750','縦向き']);
+reserveTestTable.add(['Wednesday','1','2','on','on','off','真田昌虎','18000','縦向き']);
+reserveTestTable.add(['Thursday','5','1','off','on','on','武田信子','40500','縦向き']);
+reserveTestTable.add(['Friday','2','9','on','off','off','上杉景虎','159750','縦向き']);
+reserveTestTable.add(['Saturday','9','2','on','off','off','柿崎家時','158000','縦向き']);
+reserveTestTable.add(['Sunday','9','8','on','on','on','直江愛子','634000','縦向き']);
 
-Feature('宿泊予約機能_By_Nexus4');
+Feature('宿泊予約機能_By_Nexus6');
 
 Data(reserveTestTable).Scenario('Reserve Tests', async({I , current}) => {
     I.ページを移動する('http://example.selenium.jp/reserveApp_Renewal/');

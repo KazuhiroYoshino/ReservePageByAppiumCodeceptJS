@@ -10,14 +10,12 @@ exports.config = {
   helpers: {
     Appium: {
       platform: 'Android',
-//        url: 'http://example.selenium.jp/reserveApp_Renewal/',
-        show: 'true',
       desiredCapabilities: {
             automationName: 'UiAutomator2',
-//            Avd: 'Nexus_4_API_29_1',
-            udid: 'emulator-5556',
+            udid: 'emulator-5558',
             browserName: 'Chrome'
       }
+
     }
   },
   include: {
@@ -25,7 +23,7 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  name: 'Nexus4',
+  name: 'Nexus6',
   translation: 'ja-JP',
   plugins: {
     pauseOnFail: {},
@@ -38,8 +36,8 @@ exports.config = {
     screenshotOnFail: {
       enabled: true
     },
-    allure: {
-            enabled: true
-          }
+     allure: {
+       enabled: true
+     }
   }
 }
