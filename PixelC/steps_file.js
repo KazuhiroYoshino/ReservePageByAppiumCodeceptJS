@@ -11,7 +11,6 @@ module.exports = function() {
     let dateTo;
 
   return actor({
-
         fromDay: function(startDay){
         var selector = "#datePick";
         var dateFrom;
@@ -75,6 +74,5 @@ module.exports = function() {
             var headText = headcount + "名様";
             this.see(headText);
         }
-
   });
 }

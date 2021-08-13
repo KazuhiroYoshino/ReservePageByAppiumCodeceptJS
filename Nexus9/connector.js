@@ -4,11 +4,16 @@ const jtcDate = addDays(new Date(Date.now() + ((new Date().getTimezoneOffset() +
 const jstString = format(jtcDate, 'yyyy/MM/dd');
 const dayName = format(jtcDate, 'iiii');
 
+//console.log(jtcDate);
+//console.log(jstString);
+//console.log(dayName);
+
 let startDate;
 let endDate;
 
 module.exports.dateFromSet = function() {
     		startDate = `${format(dateFrom, "yyyy")}年${format(dateFrom, "M")}月${format(dateFrom, "d")}日`;
+//    		dateFrom = `${format(zonedTargetDate, "YYYY")}年${format(zonedTargetDate, "MM")}月${format(zonedTargetDate, "DD")}日`.replace(/\n|\r/g, '');
     return startDate;
 };
 
@@ -39,6 +44,7 @@ module.exports.sunday = function() {
             		default:
             		}
                     var testReserveDate = format(dateFrom, 'yyyy/MM/dd');
+//console.log(testReserveDate);
                     return testReserveDate;
 };
 
@@ -70,6 +76,7 @@ module.exports.monday = function() {
             		}
 
                     var testReserveDate = format(dateFrom, 'yyyy/MM/dd');
+//console.log(testReserveDate);
                     return testReserveDate;
         };
 
@@ -101,6 +108,7 @@ module.exports.tuesday = function(){
             		}
 
                     var testReserveDate = format(dateFrom, 'yyyy/MM/dd');
+//console.log(testReserveDate);
                     return testReserveDate;
         };
 
@@ -132,6 +140,7 @@ module.exports.wednesday = function(){
              		}
 
                     var testReserveDate = format(dateFrom, 'yyyy/MM/dd');
+//console.log(testReserveDate);
                     return testReserveDate;
          };
 
@@ -163,6 +172,8 @@ module.exports.thursday = function(){
             		}
 
                     var testReserveDate = format(dateFrom, 'yyyy/MM/dd');
+//console.log(dateFrom);
+//console.log(testReserveDate);
                     return testReserveDate;
         };
 
@@ -185,6 +196,7 @@ module.exports.friday = function(){
           		        dateFrom = addDays(jtcDate, 1);
             			break;
             		case 'Friday':
+        //    		    today.add({"months": 0, "days": 2});
                         dateFrom = jtcDate;
             			break;
             		case 'Saturday':
@@ -194,6 +206,7 @@ module.exports.friday = function(){
             		}
 
                     var testReserveDate = format(dateFrom, 'yyyy/MM/dd');
+//console.log(testReserveDate);
                     return testReserveDate;
         };
 
@@ -224,13 +237,19 @@ module.exports.saturday = function(){
             		default:
             		}
 
+//console.log(dateFrom);
                     var testReserveDate = format(dateFrom, 'yyyy/MM/dd');
+//console.log(testReserveDate);
                     return testReserveDate;
         };
 
 module.exports.termSet = function(term){
             var DateTo = addDays(dateFrom, term);
             		endDate = `${format(DateTo, "yyyy")}年${format(DateTo, "M")}月${format(DateTo, "d")}日`;
+//console.log(jtcDate);
+//console.log(term);
+//console.log(startDate);
+//console.log(endDate);
 
             return endDate;
         };

@@ -75,6 +75,5 @@ module.exports = function() {
             var headText = headcount + "名様";
             this.see(headText);
         }
-
   });
 }

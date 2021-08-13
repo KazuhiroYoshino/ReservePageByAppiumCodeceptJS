@@ -6,7 +6,7 @@ setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
   tests: 'reserve_test/*_test.js',
-  output: './output',
+  output: '../output',
   helpers: {
     Appium: {
       platform: 'Android',

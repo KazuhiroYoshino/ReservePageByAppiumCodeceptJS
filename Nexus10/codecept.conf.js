@@ -7,15 +7,14 @@ setHeadlessWhen(process.env.HEADLESS);
 exports.config = {
   tests: 'reserve_test/*_test.js',
   output: '../output',
-  helpers: {
+ helpers: {
     Appium: {
       platform: 'Android',
       desiredCapabilities: {
             automationName: 'UiAutomator2',
-            udid: 'emulator-5558',
+            udid: 'emulator-5554',
             browserName: 'Chrome'
       }
-
     }
   },
   include: {
@@ -23,7 +22,7 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  name: 'Nexus6',
+  name: 'Nexus10',
   translation: 'ja-JP',
   plugins: {
     pauseOnFail: {},
@@ -36,8 +35,8 @@ exports.config = {
     screenshotOnFail: {
       enabled: true
     },
-     allure: {
-       enabled: true
-     }
+          allure: {
+            enabled: true
+          }
   }
 }
